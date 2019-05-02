@@ -13,7 +13,7 @@ object RpcCalculatorClient extends App {
 
   println(data.toString)
 
-  val result = Http("https://a4r9djxhra.execute-api.us-east-1.amazonaws.com/default/CalculatorLambda").postData(data.toString)
+  val result = Http("https://a4r9djxhra.execute-api.us-east-1.amazonaws.com/default/CalculatorLambda").postData(data.toByteArray)
     .header("Content-Type", "application/grpc+proto")
     .header("x-api-key", "QDqkEgvLZZ2rqt5RlZ6Gx2SpOm0FsFRE5yjsByQZ").asString
 
