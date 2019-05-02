@@ -8,7 +8,7 @@ object RestCalculatorClient extends App {
 
   val result = Http("https://a4r9djxhra.execute-api.us-east-1.amazonaws.com/default/CalculatorLambda").param("op1", "10").
     param("op2", "30").
-    param("operator", "+")
+    param("operator", "*")
     .header("x-api-key", "QDqkEgvLZZ2rqt5RlZ6Gx2SpOm0FsFRE5yjsByQZ").asString
 
 
