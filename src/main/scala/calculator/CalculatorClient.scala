@@ -1,6 +1,6 @@
 package calculator
 
-import io.grpc.calculator.Input
+import io.grpc.calculator.{Input, Response}
 import scalaj.http.{Base64, Http}
 
 
@@ -14,10 +14,13 @@ object CalculatorClient extends App {
     .header("Content-Type", "application/grpc+proto")
     .header("x-api-key", "QDqkEgvLZZ2rqt5RlZ6Gx2SpOm0FsFRE5yjsByQZ").asString
 
-  val body = result.body
+  val raw_body = Base64.decode(result.body)
+  println(result.headers)
 
-  println(Base64.decode(body).toString)
+  val returnedResponse = Response.parseFrom(raw_body)
 
-  println(result.body)
+  println(returnedResponse.toString)
+
+
 
 }
