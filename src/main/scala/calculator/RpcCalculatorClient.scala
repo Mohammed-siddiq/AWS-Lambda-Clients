@@ -5,12 +5,11 @@ import io.grpc.calculator.{Input, Response}
 import scalaj.http.{Base64, Http}
 
 
-object CalculatorClient extends App {
-  //  Http("https://a4r9djxhra.execute-api.us-east-1.amazonaws.com/default/FirstLambda").
+object RpcCalculatorClient extends App {
 
   println("Sending Request Proto .... ")
 
-  val data = Input(10, 20, "/")
+  val data = Input(500, 100, "+")
 
   println(data.toString)
 
