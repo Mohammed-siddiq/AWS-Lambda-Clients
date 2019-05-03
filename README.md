@@ -3,6 +3,7 @@
 AWS Lambda implementation with Scala and Grpc running a simple calculator functionality.
 Also supports REST requests (communication with JSON over Http).
  
+ 
 # Description
 
 Uses ProtoBuffers for communication where the lambda receives request as a protobuff
