@@ -17,7 +17,8 @@ libraryDependencies ++= Seq(
   "com.amazonaws" % "aws-lambda-java-core" % "1.2.0",
   "com.amazonaws" % "aws-lambda-java-events" % "2.2.6",
   "org.scalaj" %% "scalaj-http" % "2.4.1",
-  "com.typesafe" % "config" % "1.3.2"
+  "com.typesafe" % "config" % "1.3.2",
+  "org.scalatest" %% "scalatest" % "3.0.5" % "test"
 )
 
 
