@@ -114,7 +114,7 @@ This will run the tests for both REST and GRPC clients .
 
 ## Sample output run of the clients 
 
-```$xslt
+```yaml
 [info] TestGRPCtLambdaClient:
 [info] Lambda client with Proto
 [info] - should Invoke the lambda function for addition with passed params and return the Proto result
