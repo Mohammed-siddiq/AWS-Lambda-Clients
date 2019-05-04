@@ -113,6 +113,7 @@ sbt clean test
 This will run the tests for both REST and GRPC clients .
 
 ## Sample output run of the clients 
+
 ```$xslt
 [info] TestGRPCtLambdaClient:
 [info] Lambda client with Proto
