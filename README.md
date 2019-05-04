@@ -104,15 +104,43 @@ curl -X GET \
 
 # Steps to run
 
-Build a fat jar using the following command : 
+Run the clients to test the lambda function using the following command
 
 ```sbtshell
-Sbt clean assembly
+sbt clean test
 ```
 
-This will run the tests and build a deployable jar.
+This will run the tests for both REST and GRPC clients .
 
-Deploy the Jar on AWS Lambda. The following pictures give a snapshots.
+## Sample output run of the clients 
+```$xslt
+[info] TestGRPCtLambdaClient:
+[info] Lambda client with Proto
+[info] - should Invoke the lambda function for addition with passed params and return the Proto result
+[info] Lambda client with Proto
+[info] - should Invoke the lambda function for subtraction with passed params and return the Proto result
+[info] Lambda client with Proto
+[info] - should Invoke the lambda function for multiplication with passed params and return the Proto result
+[info] Lambda client with Proto
+[info] - should Invoke the lambda function for division with passed params and return the Proto result
+
+[info] TestRESTLambdaClient:
+[info] Lambda client with JSON
+[info] - should Invoke the lambda function for addition with passed params and return the JSON result
+[info] Lambda client with JSON
+[info] - should Invoke the lambda function for subtraction with passed params and return the JSON result
+[info] Lambda client with JSON
+[info] - should Invoke the lambda function for multiplication with passed params and return the JSON result
+[info] Lambda client with JSON
+[info] - should Invoke the lambda function for division with passed params and return the JSON result
+[info] Run completed in 4 seconds, 245 milliseconds.
+[info] Total number of tests run: 8
+[info] Suites: completed 2, aborted 0
+[info] Tests: succeeded 8, failed 0, canceled 0, ignored 0, pending 0
+[info] All tests passed.
+[success] Total time: 16 s, completed May 3, 2019, 10:51:50 PMeturn the Proto result
+```
+.
 
 ### Lambda Function Deployed
 
